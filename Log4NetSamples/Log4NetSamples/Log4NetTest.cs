@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reflection;
 using log4net;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -13,7 +14,7 @@ namespace Log4NetSamples
             // log4net.Config.XmlConfigurator.Configure();
 
             // Set ApplicationName
-            log4net.GlobalContext.Properties["ApplicationName"] = "Log4NetSamples";
+            log4net.GlobalContext.Properties["ApplicationName"] = Assembly.GetExecutingAssembly().GetName().Name;
         }
         [TestMethod]
         public void Test_LogMethod()
