@@ -54,6 +54,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Appenders\ShowLogAppender.cs" />
     <Compile Include="ConfigSamples\Log4netConfig.cs" />
     <Compile Include="Log4NetTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
