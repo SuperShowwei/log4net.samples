@@ -2,6 +2,7 @@
 using System.IO;
 using System.Reflection;
 using log4net;
+using log4net.Core;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Log4NetSamples
@@ -26,6 +27,9 @@ namespace Log4NetSamples
 
             log.Info("Hello World");
             log.InfoFormat("Hello World {0}", DateTime.Now);
+
+            // 其他 Level 的記錄方式
+            log.Logger.Log(null, Level.Notice, "Notice !!", null);
         }
     }
 }
